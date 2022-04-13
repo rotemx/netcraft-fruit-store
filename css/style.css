@@ -40,7 +40,7 @@ padding: 20px;}
 .shopping-cart
 {
 	flex : 2;
-}
+flex-direction: column;}
 
 header, footer, .content, .product-list, .shopping-cart
 {

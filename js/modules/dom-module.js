@@ -2,7 +2,10 @@ let callback; //callback function to be called when "add" is clicked;
 
 function clickFunctionFactory(eventObject)
 {
+	console.log('value is' + eventObject.amountInput.val());
 	return () => {
+		console.log('value is' + eventObject.amountInput.val());
+		
 		console.log('callback runs now:');
 		callback({product: eventObject.product, amount:+(eventObject.amountInput.val())})
 	};
@@ -16,7 +19,7 @@ function getProductTemplate(product)
 	}
 	
 	const $template = $(`
-			<div class="product-list-item">
+			<div class="product-list-item" data-product-id="${product.id}">
 					<div class="product-image">
 						<img height="50" width="50" src="img/${product.img_url}" />
 					</div>
@@ -27,7 +30,7 @@ function getProductTemplate(product)
 						${product.price} $
 					</div>
 					<div class="number-selector">
-						<input type="number" value="1" min="0" class="amount">
+						<input type="number" value="1" min="0" class="amount" id="${'_amount_' + product.id}">
 					</div>
 					<input type="button" value="add" class="add-button">
 			</div>
