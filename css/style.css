@@ -52,4 +52,6 @@ header, footer, .content, .product-list, .shopping-cart
 
 .product-list-item {display: flex;/* border: 2px solid; */}
 
-.product-list-item > * {flex: 1;align-items: center;justify-content: center;/* border: 2px solid; */display: flex;}
+.product-list-item > * > * {flex: 1;align-items: center;justify-content: center;/* border: 2px solid; */display: flex;}
+
+.product-list-item > * {display: flex;/* border: 2px solid red; */flex: 1;}

@@ -1,9 +1,17 @@
-import {PRODUCTS}            from "./modules/product-list.js";
-import {populateProductList} from "./modules/dom-module.js";
+import {PRODUCTS}                                                  from "./modules/product-list.js";
+import {onDomReady, populateProductList, registerAddButtonClicked} from "./modules/dom-module.js";
 
-$(document).ready(()=>{
-    console.log('DOM is ready');
-    
-    populateProductList(PRODUCTS);
-	
+const shoppingCart = [];
+
+const callback = (eventObject) => {
+	console.log(eventObject);
+	console.log(`You have added ${eventObject.amount} units of ${eventObject.product.name} for ${eventObject.product.price}`);
+};
+
+registerAddButtonClicked(callback)
+
+onDomReady(()=>{
+	populateProductList(PRODUCTS);
 })
+
+
