@@ -1,0 +1,19 @@
+body {
+	margin: 0;}
+
+
+body, html {height: 100%;/* border: 3px solid rebeccapurple; */display: flex;flex-direction: column;}
+
+header, footer {height: 50px;background: #dedede;display: flex;align-items: center;justify-content: center;}
+
+.content {flex: 1;display: flex;}
+
+.product-list {flex: 3;background: #eaf5ff;}
+
+.product-list, .shopping-cart {height: 100%;}
+
+.shopping-cart {flex: 2;}
+
+header, footer, .content, .product-list, .shopping-cart {display: flex;
+    align-items: center;
+    justify-content: center;}
